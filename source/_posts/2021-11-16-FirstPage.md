@@ -44,5 +44,5 @@ export const getServerSideProps: GetServerSideProps<Partial<OrderRelatedProp>> =
 export default OrderRelated;
 ```
 ## 3.试试自动构建推送
-似乎可以了  补充下token
+似乎可以了  补充下token~
 
