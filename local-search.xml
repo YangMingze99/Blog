@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>FirstPage</title>
+    <link href="/2021/11/16/FirstPage/"/>
+    <url>/2021/11/16/FirstPage/</url>
+    
+    <content type="html"><![CDATA[<h1 id="试一下MarkDown渲染器"><a href="#试一下MarkDown渲染器" class="headerlink" title="试一下MarkDown渲染器"></a>试一下MarkDown渲染器</h1><h2 id="1-加个图片试试"><a href="#1-加个图片试试" class="headerlink" title="1.加个图片试试"></a>1.加个图片试试</h2><img src="/2021/11/16/FirstPage/01.jpg" class=""><h2 id="2-加个代码块试试"><a href="#2-加个代码块试试" class="headerlink" title="2.加个代码块试试"></a>2.加个代码块试试</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> getServerSideProps: GetServerSideProps&lt;Partial&lt;OrderRelatedProp&gt;&gt; = <span class="hljs-keyword">async</span> (ctx: BaseContext) =&gt; &#123;<br><span class="hljs-keyword">const</span> redirect = isRedirect(ctx);<br><span class="hljs-keyword">if</span> (redirect) &#123;<br><span class="hljs-keyword">return</span> redirect;<br>&#125;<br><br><span class="hljs-keyword">const</span> DOMid = ctx?.query?.DOMid <span class="hljs-keyword">as</span> string || <span class="hljs-string">&quot;&quot;</span>;<br><span class="hljs-keyword">const</span> id = ctx?.query?.id <span class="hljs-keyword">as</span> string || <span class="hljs-string">&quot;&quot;</span>;<br><span class="hljs-keyword">const</span> baseInfo = ctx.req.baseInfo || <span class="hljs-literal">null</span>;<br><span class="hljs-keyword">const</span> language = baseInfo?.language;<br><br><span class="hljs-keyword">const</span> key = language === <span class="hljs-string">&quot;en&quot;</span> ? <span class="hljs-string">&quot;_Help_CMS_FAQ_EZ_SHIP_en&quot;</span> : <span class="hljs-string">`_Help_CMS_FAQ_EZ_SHIP_zh-CN`</span>;<br><br><span class="hljs-keyword">const</span> [, res] = <span class="hljs-keyword">await</span> e(ListCmsProSubjects)([key]);<br><span class="hljs-keyword">let</span> cmsHtml: any = <span class="hljs-literal">null</span>;<br><span class="hljs-keyword">if</span> (res[key] &amp;&amp; res[key].html) &#123;<br>cmsHtml = <span class="hljs-built_in">JSON</span>.parse(res[key].html);<br>&#125;<br><br><span class="hljs-keyword">return</span> &#123;<br><span class="hljs-attr">props</span>: &#123;<br>cmsHtml,<br>DOMid,<br>id<br>&#125;<br>&#125;;<br>&#125;;<br><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> OrderRelated;<br></code></pre></td></tr></table></figure><h2 id="3-试试自动构建推送"><a href="#3-试试自动构建推送" class="headerlink" title="3.试试自动构建推送"></a>3.试试自动构建推送</h2><p>似乎可以了  补充下token~！</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>JavaScript</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>JavaScript</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
